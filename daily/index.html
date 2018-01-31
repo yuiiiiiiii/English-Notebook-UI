@@ -1,0 +1,63 @@
+<style type="text/css">
+
+.main{
+    text-align: center; 
+    background:none;
+    border-radius: 20px;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+form{
+    font-size: 20px;
+}
+input[type="submit"]{
+    width: 150px;    
+    height: 50px;    
+    margin-top: 25px;    
+    background: #1E90FF;    
+    border-radius: 10px;    
+    border:none;  
+    font-size: 18px;  
+    font-weight: 700;    
+    color: #fff; 
+}
+input[type="submit"]:hover {
+    background: #79A84B;    
+    outline: 0; 
+}
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>做题Ing</title>
+</head>
+
+<body background="../img/bg3.png">
+    <div class="main">
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>{{ question }}<p>
+            <p><input type="hidden" name="question_id" id="question_id" value="{{ question_id }}" /></p>
+            <p><input type="radio" name="choice_id" id="choice_A" value="{{ choice_A_id }}" /><label for="choice_A">A) {{ choice_A }}</label></p>
+            <p><input type="radio" name="choice_id" id="choice_B" value="{{ choice_B_id }}" /><label for="choice_B">B) {{ choice_B }}</label></p>
+            <p><input type="radio" name="choice_id" id="choice_C" value="{{ choice_C_id }}" /><label for="choice_C">C) {{ choice_C }}</label></p>
+            <p><input type="radio" name="choice_id" id="choice_D" value="{{ choice_D_id }}" /><label for="choice_D">D) {{ choice_D }}</label></p>
+            <br><br>
+            <input type="submit" value="提交" />
+        </form>
+    </div>
+</body>
+</html>
