@@ -1,0 +1,61 @@
+<style type="text/css">
+.main{
+    text-align: center; 
+    background:none;
+    border-radius: 20px;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+p{
+	font-size: 20px;
+}
+
+button{    
+    width: 150px;    
+    height: 50px;    
+    margin-top: 25px;    
+    background: #1E90FF;    
+    border-radius: 10px;    
+    border:none;  
+    font-size: 18px;  
+    font-weight: 700;    
+    color: #fff;  
+}  
+button:hover {  
+    background: #79A84B;    
+    outline: 0;  
+} 
+
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>批改结果</title>
+</head>
+
+<body background="../img/bg3.png">
+	<div class="main">
+		<!-- <div class="panel panel-default" > -->
+		<p>{{ check }}</p>
+		<br><br>
+	    <p>{{ question }}</p>
+	    <p>正确答案：{{ correct_answer }}</p>
+	    <br><br>
+	    <a class="btn btn-default btn-lg" href="/daily/">Next</a>
+		<!-- </div> -->
+	</div>
+</body>
+</html>
